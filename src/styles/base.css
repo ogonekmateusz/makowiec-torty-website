@@ -1,1 +1,36 @@
 @import "tailwindcss";
+
+@import "tailwindcss";
+
+:root {
+  /* BACKGROUNDS */
+  --background: #f8f4f1;
+  --background-secondary: #ffffff;
+  --background-dark: #1f171b;
+
+  /* PRIMARY */
+  --primary: #7d3f5e;
+  --primary-light: #c58ba6;
+  --primary-soft: #f3dce6;
+
+  /* TEXT */
+  --text-primary: #1c1917;
+  --text-secondary: #57534e;
+  --text-muted: #a8a29e;
+  --text-white: #ffffff;
+
+  /* BORDERS */
+  --border: #e7e5e4;
+  --border-light: rgba(255, 255, 255, 0.4);
+
+  /* SHADOWS */
+  --shadow-primary: 0 10px 30px rgba(125, 63, 94, 0.2);
+  --shadow-card: 0 10px 40px rgba(0, 0, 0, 0.08);
+
+  /* RADIUS */
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
+
+  /* TRANSITIONS */
+  --transition: all 0.3s ease;
+}
