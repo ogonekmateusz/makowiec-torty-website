@@ -1,5 +1,8 @@
+import AppRoutes from "./Routes/Routes"
 export default function App() {
   return (
-    <div>App</div>
+    <div className="App">
+      <AppRoutes />
+    </div>
   )
 }
