@@ -91,17 +91,6 @@ export default function Navbar() {
               >
                 MakowiecTorty
               </span>
-
-              <span
-                className="
-                  uppercase tracking-[0.25em]
-                  text-[10px]
-                  text-(--text-muted)
-                  mt-1
-                "
-              >
-                Weronika Makowiec
-              </span>
             </div>
           </button>
 
