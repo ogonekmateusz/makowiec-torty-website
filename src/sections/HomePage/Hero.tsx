@@ -1,7 +1,7 @@
-import Grid from "../../shared/Grid";
-import PrimaryButton from "../../shared/PrimaryButton";
-import SectionContainer from "../../shared/SectionContainer";
-import scrollToHash from "../../../utils/ScrollToHash";
+import Grid from "../../components/shared/Grid";
+import PrimaryButton from "../../components/shared/PrimaryButton";
+import SectionContainer from "../../components/shared/SectionContainer";
+import scrollToHash from "../../utils/ScrollToHash";
 import { IoIosArrowRoundForward } from "react-icons/io";
 
 export default function Hero() {
