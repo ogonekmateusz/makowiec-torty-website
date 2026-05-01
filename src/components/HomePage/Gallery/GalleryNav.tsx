@@ -1,4 +1,4 @@
-import type { cakeCategory } from "../../types/cakeCategory";
+import type { cakeCategory } from "../../../types/cakeCategory";
 import GalleryNavButton from "./GalleryNavButton";
 interface GalleryNavProps {
   data: cakeCategory[];
