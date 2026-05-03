@@ -1,9 +1,4 @@
-import type { ReactNode } from "react";
-type ContactInfoItemProps = {
-  icon: ReactNode;
-  label: string;
-  value: ReactNode;
-};
+import type { ContactInfoItemProps } from "../../../types/contactInfoItem";
 
 export default function ContactInfoItem({
   icon,
@@ -17,7 +12,7 @@ export default function ContactInfoItem({
       </div>
 
       <div>
-        <p className="text-xs uppercase tracking-[0.2em] text-pink-200 mb-1">
+        <p className="text-xs uppercase tracking-[0.2em] text-(--primary-soft) mb-1">
           {label}
         </p>
 

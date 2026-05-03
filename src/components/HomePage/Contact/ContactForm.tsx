@@ -33,16 +33,26 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="relative bg-white/90 backdrop-blur rounded-4xl border border-white shadow-[0_20px_60px_rgba(0,0,0,0.08)] p-8 md:p-12">
-      {/* badge */}
-
+    <div
+      className="
+        relative
+        bg-(--background-secondary)/90
+        backdrop-blur
+        rounded-2xl
+        border
+        border-(--border-light)
+        shadow-(--shadow-card)
+        p-8
+        md:p-12
+      "
+    >
       <div className="max-w-xl mb-10">
-        <h2 className="heading text-4xl md:text-5xl leading-tight text-stone-900 mb-4">
+        <h2 className="heading text-4xl md:text-5xl leading-tight text-(--text-primary) mb-4">
           Stwórzmy razem
-          <span className="block text-[#7d3f5e]">wyjątkowy tort</span>
+          <span className="block text-(--primary)">wyjątkowy tort</span>
         </h2>
 
-        <p className="text-stone-500 leading-relaxed text-[15px]">
+        <p className="text-(--text-secondary) leading-relaxed text-[15px]">
           Napisz kilka słów o uroczystości, stylu i smakach, które lubisz.
           Przygotuję dla Ciebie indywidualną propozycję wraz z orientacyjną
           wyceną.
@@ -57,7 +67,7 @@ export default function ContactForm() {
         <div className="flex flex-col gap-2">
           <label
             htmlFor="name"
-            className="text-[11px] uppercase tracking-[0.2em] text-stone-400"
+            className="text-[11px] uppercase tracking-[0.2em] text-(--text-muted)"
           >
             Twoje imię
           </label>
@@ -70,7 +80,23 @@ export default function ContactForm() {
             type="text"
             placeholder="np. Anna Nowak"
             required
-            className="h-14 rounded-2xl border border-stone-200 bg-stone-50 px-4 text-stone-800 placeholder:text-stone-300 transition-all duration-300 focus:border-[#c58ba6] focus:bg-white focus:outline-none focus:ring-4 focus:ring-pink-100"
+            className="
+              h-14
+              rounded-2xl
+              border
+              border-(--border)
+              bg-(--background)
+              px-4
+              text-(--text-primary)
+              placeholder:text-(--text-muted)
+              transition-all
+              duration-300
+              focus:border-(--primary-light)
+              focus:bg-(--background-secondary)
+              focus:outline-none
+              focus:ring-4
+              focus:ring-(--primary-soft)
+            "
           />
         </div>
 
@@ -78,7 +104,7 @@ export default function ContactForm() {
         <div className="flex flex-col gap-2">
           <label
             htmlFor="email"
-            className="text-[11px] uppercase tracking-[0.2em] text-stone-400"
+            className="text-[11px] uppercase tracking-[0.2em] text-(--text-muted)"
           >
             Email
           </label>
@@ -89,9 +115,25 @@ export default function ContactForm() {
             value={form.email}
             onChange={handleChange}
             type="email"
-            placeholder="anna@example.com"
+            placeholder="anna@przykład.com"
             required
-            className="h-14 rounded-2xl border border-stone-200 bg-stone-50 px-4 text-stone-800 placeholder:text-stone-300 transition-all duration-300 focus:border-[#c58ba6] focus:bg-white focus:outline-none focus:ring-4 focus:ring-pink-100"
+            className="
+              h-14
+              rounded-2xl
+              border
+              border-(--border)
+              bg-(--background)
+              px-4
+              text-(--text-primary)
+              placeholder:text-(--text-muted)
+              transition-all
+              duration-300
+              focus:border-(--primary-light)
+              focus:bg-(--background-secondary)
+              focus:outline-none
+              focus:ring-4
+              focus:ring-(--primary-soft)
+            "
           />
         </div>
 
@@ -99,7 +141,7 @@ export default function ContactForm() {
         <div className="flex flex-col gap-2">
           <label
             htmlFor="phone"
-            className="text-[11px] uppercase tracking-[0.2em] text-stone-400"
+            className="text-[11px] uppercase tracking-[0.2em] text-(--text-muted)"
           >
             Telefon
           </label>
@@ -111,7 +153,23 @@ export default function ContactForm() {
             onChange={handleChange}
             type="tel"
             placeholder="+48 600 700 800"
-            className="h-14 rounded-2xl border border-stone-200 bg-stone-50 px-4 text-stone-800 placeholder:text-stone-300 transition-all duration-300 focus:border-[#c58ba6] focus:bg-white focus:outline-none focus:ring-4 focus:ring-pink-100"
+            className="
+              h-14
+              rounded-2xl
+              border
+              border-(--border)
+              bg-(--background)
+              px-4
+              text-(--text-primary)
+              placeholder:text-(--text-muted)
+              transition-all
+              duration-300
+              focus:border-(--primary-light)
+              focus:bg-(--background-secondary)
+              focus:outline-none
+              focus:ring-4
+              focus:ring-(--primary-soft)
+            "
           />
         </div>
 
@@ -119,7 +177,7 @@ export default function ContactForm() {
         <div className="flex flex-col gap-2">
           <label
             htmlFor="date"
-            className="text-[11px] uppercase tracking-[0.2em] text-stone-400"
+            className="text-[11px] uppercase tracking-[0.2em] text-(--text-muted)"
           >
             Data uroczystości
           </label>
@@ -130,7 +188,22 @@ export default function ContactForm() {
             value={form.date}
             onChange={handleChange}
             type="date"
-            className="h-14 rounded-2xl border border-stone-200 bg-stone-50 px-4 text-stone-500 transition-all duration-300 focus:border-[#c58ba6] focus:bg-white focus:outline-none focus:ring-4 focus:ring-pink-100"
+            className="
+              h-14
+              rounded-2xl
+              border
+              border-(--border)
+              bg-(--background)
+              px-4
+              text-(--text-secondary)
+              transition-all
+              duration-300
+              focus:border-(--primary-light)
+              focus:bg-(--background-secondary)
+              focus:outline-none
+              focus:ring-4
+              focus:ring-(--primary-soft)
+            "
           />
         </div>
 
@@ -138,7 +211,7 @@ export default function ContactForm() {
         <div className="md:col-span-2 flex flex-col gap-2">
           <label
             htmlFor="message"
-            className="text-[11px] uppercase tracking-[0.2em] text-stone-400"
+            className="text-[11px] uppercase tracking-[0.2em] text-(--text-muted)"
           >
             Opowiedz o swoim wymarzonym torcie
           </label>
@@ -151,7 +224,24 @@ export default function ContactForm() {
             rows={7}
             required
             placeholder="Np. tort weselny w jasnych kolorach, smak pistacja-malina, około 30 porcji..."
-            className="rounded-3xl border border-stone-200 bg-stone-50 px-5 py-4 text-stone-800 placeholder:text-stone-300 transition-all duration-300 focus:border-[#c58ba6] focus:bg-white focus:outline-none focus:ring-4 focus:ring-pink-100 resize-none"
+            className="
+              rounded-3xl
+              border
+              border-(--border)
+              bg-(--background)
+              px-5
+              py-4
+              text-(--text-primary)
+              placeholder:text-(--text-muted)
+              transition-all
+              duration-300
+              focus:border-(--primary-light)
+              focus:bg-(--background-secondary)
+              focus:outline-none
+              focus:ring-4
+              focus:ring-(--primary-soft)
+              resize-none
+            "
           />
         </div>
 
