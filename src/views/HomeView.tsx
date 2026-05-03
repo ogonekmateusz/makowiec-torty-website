@@ -9,8 +9,8 @@ export default function HomeView() {
     <HomeLayout>
       <Navbar />
       <Hero />
-      <Gallery />
-      <Contact />
+      <Gallery id="gallery" />
+      <Contact id="contact" />
     </HomeLayout>
   );
 }
