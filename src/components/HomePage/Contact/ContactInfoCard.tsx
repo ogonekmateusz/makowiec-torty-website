@@ -28,7 +28,7 @@ export default function ContactInfoCard() {
           <ContactInfoItem
             icon={<FaPhoneAlt className="w-5 h-5" />}
             label="Telefon"
-            value="+48 123 456 789"
+            value="+48 797 098 220"
           />
 
           <ContactInfoItem
