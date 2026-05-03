@@ -4,9 +4,9 @@ import SectionContainer from "../../components/shared/SectionContainer";
 import scrollToHash from "../../utils/ScrollToHash";
 import { IoIosArrowRoundForward } from "react-icons/io";
 
-export default function Hero() {
+export default function Hero({id}: {id: string}) {
   return (
-    <section className="relative overflow-hidden bg-[#f8f4f1] min-h-screen flex items-center py-24">
+    <section id={id} className="relative overflow-hidden bg-[#f8f4f1] min-h-screen flex items-center py-24">
       {/* dekoracyjne blur */}
       <div className="absolute -top-30 -left-30 w-105 h-105 bg-pink-200/40 rounded-full blur-3xl" />
       <div className="absolute -bottom-40 -right-30 w-125 h-125 bg-rose-100/50 rounded-full blur-3xl" />

@@ -11,7 +11,7 @@ const NAVBAR_ITEMS = [
   },
   {
     title: "O mnie",
-    href: "#about",
+    href: "#hero",
   },
   {
     title: "Kontakt",
