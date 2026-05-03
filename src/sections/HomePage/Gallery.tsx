@@ -22,7 +22,6 @@ export default function Gallery({ id }: { id: string }) {
 
   const cakesCategories: cakeCategory[] = [
     { id: 1, title: "Wszystkie" },
-
     ...[...new Set(cakes?.map((cake) => cake.category))].map(
       (category, index) => ({
         id: index + 2,
@@ -30,6 +29,16 @@ export default function Gallery({ id }: { id: string }) {
       }),
     ),
   ];
+
+  const filteredCakes =
+    cakes?.filter((cake) => {
+      if (activeId === 1) return true;
+
+      return (
+        cake.category ===
+        cakesCategories.find((item) => item.id === activeId)?.title
+      );
+    }) || [];
 
   return (
     <section id={id} className="relative overflow-hidden bg-[#f8f4f1] py-24">
@@ -53,7 +62,10 @@ export default function Gallery({ id }: { id: string }) {
           <GalleryNav
             data={cakesCategories}
             activeId={activeId}
-            setActiveId={setActiveId}
+            setActiveId={(id) => {
+              setActiveId(id);
+              setVisibleCakes(VISIBLE_CAKES);
+            }}
           />
 
           <Grid
@@ -61,44 +73,37 @@ export default function Gallery({ id }: { id: string }) {
             gap="gap-8"
             className="mt-14"
           >
-            {cakes
-              ?.filter((cake) => {
-                if (activeId === 1) return true;
-
-                return (
-                  cake.category ===
-                  cakesCategories.find((item) => item.id === activeId)?.title
-                );
-              })
-              .slice(0, visibleCakes)
-              .map((cake) => (
-                <GalleryCard
-                  key={cake.id}
-                  id={cake.id}
-                  image_url={cake.image_url}
-                  category={cake.category}
-                  name={cake.name}
-                  description={cake.description}
-                />
-              ))}
+            {filteredCakes.slice(0, visibleCakes).map((cake) => (
+              <GalleryCard
+                key={cake.id}
+                id={cake.id}
+                image_url={cake.image_url}
+                category={cake.category}
+                name={cake.name}
+                description={cake.description}
+              />
+            ))}
           </Grid>
-          <div className="flex justify-center">
-            <PrimaryButton
-              onClick={() => {
-                if (visibleCakes >= (cakes?.length || 0)) {
-                  setVisibleCakes(VISIBLE_CAKES);
-                } else {
-                  setVisibleCakes((prev) => prev + VISIBLE_CAKES);
+
+          {filteredCakes.length > VISIBLE_CAKES && (
+            <div className="flex justify-center">
+              <PrimaryButton
+                onClick={() => {
+                  if (visibleCakes >= filteredCakes.length) {
+                    setVisibleCakes(VISIBLE_CAKES);
+                  } else {
+                    setVisibleCakes((prev) => prev + VISIBLE_CAKES);
+                  }
+                }}
+                className="mx-auto mt-12"
+                title={
+                  visibleCakes >= filteredCakes.length
+                    ? "Pokaż mniej"
+                    : "Zobacz wszystkie"
                 }
-              }}
-              className="mx-auto mt-12"
-              title={
-                visibleCakes >= (cakes?.length || 0)
-                  ? "Pokaż mniej"
-                  : "Zobacz Wszystkie"
-              }
-            />
-          </div>
+              />
+            </div>
+          )}
         </div>
       </SectionContainer>
     </section>
