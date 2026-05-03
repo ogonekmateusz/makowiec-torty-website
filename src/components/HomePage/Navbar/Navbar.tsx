@@ -3,7 +3,7 @@ import SectionContainer from "../../shared/SectionContainer";
 import { useEffect, useState } from "react";
 import scrollToHash from "../../../utils/ScrollToHash";
 import NavbarItem from "./NavbarItem";
-
+import { FaInstagram } from "react-icons/fa";
 const NAVBAR_ITEMS = [
   {
     title: "Galeria",
@@ -44,7 +44,7 @@ export default function Navbar() {
         <div
           className={`
             flex items-center justify-between
-            px-6 md:px-8 lg:px-10
+            px-4 sm:px-6 md:px-8 lg:px-10
             rounded-full
             border
             transition-all duration-500
@@ -67,7 +67,7 @@ export default function Navbar() {
         >
           <button
             onClick={() => scrollToHash("")}
-            className="group py-5 flex items-center gap-3"
+            className="group py-3 md:py-5 flex items-center gap-3"
           >
             <div
               className="
@@ -85,7 +85,7 @@ export default function Navbar() {
               <span
                 className="
                   heading italic
-                  text-xl md:text-2xl
+                  text-lg sm:text-xl md:text-2xl
                   text-(--text-primary)
                 "
               >
@@ -122,15 +122,12 @@ export default function Navbar() {
                 bg-[rgba(255,255,255,0.7)]
               "
             >
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M7.75 2C4.574 2 2 4.574 2 7.75v8.5C2 19.426 4.574 22 7.75 22h8.5C19.426 22 22 19.426 22 16.25v-8.5C22 4.574 19.426 2 16.25 2h-8.5zm0 1.8h8.5a3.95 3.95 0 013.95 3.95v8.5a3.95 3.95 0 01-3.95 3.95h-8.5a3.95 3.95 0 01-3.95-3.95v-8.5A3.95 3.95 0 017.75 3.8zm8.95 1.35a.9.9 0 100 1.8.9.9 0 000-1.8zM12 7a5 5 0 100 10 5 5 0 000-10zm0 1.8A3.2 3.2 0 1112 15.2 3.2 3.2 0 0112 8.8z" />
-              </svg>
+              <FaInstagram className="w-4 h-4" />
             </a>
 
             <PrimaryButton
               title="Zamów teraz"
               onClick={() => scrollToHash("#contact")}
-              className="px-6 md:px-7"
             />
           </div>
         </div>
