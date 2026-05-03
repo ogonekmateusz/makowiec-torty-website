@@ -15,7 +15,7 @@ import PrimaryButton from "../../components/shared/PrimaryButton";
 
 const VISIBLE_CAKES: number = 6;
 
-export default function Gallery() {
+export default function Gallery({ id }: { id: string }) {
   const cakes = useFetch<Cake[]>(getCakes);
   const [activeId, setActiveId] = useState(1);
   const [visibleCakes, setVisibleCakes] = useState(VISIBLE_CAKES);
@@ -32,7 +32,7 @@ export default function Gallery() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-[#f8f4f1] py-24">
+    <section id={id} className="relative overflow-hidden bg-[#f8f4f1] py-24">
       {/* dekoracje */}
       <div className="absolute top-0 left-0 h-80 w-80 rounded-full bg-pink-100 opacity-50 blur-3xl" />
       <div className="absolute right-0 bottom-0 h-96 w-96 rounded-full bg-rose-100 opacity-40 blur-3xl" />
